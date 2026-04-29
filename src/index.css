@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg-dark: #0f172a;
+  --color-card-bg: #1e293b;
+  --color-accent: #38bdf8;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-border-custom: rgba(148, 163, 184, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-primary antialiased selection:bg-accent selection:text-bg-dark;
+  }
+}
+
+@layer components {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  }
+
+  .card-title {
+    @apply text-[11px] font-semibold text-text-secondary uppercase tracking-[0.1em] mb-3;
+  }
+
+  .persona-card {
+    @apply bg-card-bg p-4 rounded-xl border border-border-custom;
+  }
+
+  .ghost-tip {
+    @apply bg-success/5 border-l-4 border-success p-3 rounded-r-lg mb-4 text-sm leading-relaxed text-green-100;
+  }
+
+  .ghost-tip-alert {
+    @apply bg-warning/5 border-l-4 border-warning p-3 rounded-r-lg mb-4 text-sm leading-relaxed text-amber-100;
+  }
+}

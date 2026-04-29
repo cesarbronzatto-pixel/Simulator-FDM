@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Microfone: FDM Simulador",
+  "description": "Uma plataforma de roleplay para treinamento comercial do produto FDM (Fair Decision Making) da Xertica.ai, com interação por texto e personas dinâmicas.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}
